@@ -11,7 +11,7 @@ function App() {
     const formData = new FormData();
     formData.append("file", file);
 
-    const res = await fetch("https://datacleaning-tool.onrender.com", {
+    const res = await fetch("https://datacleaning-tool-2.onrender.com", {
       method: "POST",
       body: formData,
     });
@@ -21,7 +21,7 @@ function App() {
   };
 
   const handleExport = async () => {
-    const res = await fetch("https://datacleaning-tool.onrender.com");
+    const res = await fetch("https://datacleaning-tool-2.onrender.com");
     const blob = await res.blob();
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement("a");
